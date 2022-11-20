@@ -1,6 +1,6 @@
 This project is an exclusive collaboration between Kanu Shetkar, Zachary Shaffer, and Joshua Millman
 
-The purpose of this project is to create a plagarism checker for computer science
+The purpose of this project is to create a plagiarism checker for computer science
 assignments of all multiple file formats.
 
 Elements needed for project
@@ -14,6 +14,7 @@ Elements needed for project
 - create labelled dataframe for each case
     - one column is TFIDF Value
         - possibly do multiple vectors
+        - think movie recommender
     - other is if plagiarized or not
     - comparison is made to original source code file(s)
         - possibly cosine distance from original file vector to
