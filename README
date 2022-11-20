@@ -20,7 +20,7 @@ Elements needed for project
         - possibly cosine distance from original file vector to
 
 - create one class for data being evaluated
-    - store compared data into dataframe
-    - tokenize
-    - compare dataframes.
+    - store data to be compared to original class into dataframe
+    - tokenize both dataframes by word
+    - compare dataframes to extract similarity
     - 
