@@ -18,3 +18,9 @@ Elements needed for project
     - other is if plagiarized or not
     - comparison is made to original source code file(s)
         - possibly cosine distance from original file vector to
+
+- create one class for data being evaluated
+    - store compared data into dataframe
+    - tokenize
+    - compare dataframes.
+    - 
