@@ -3,4 +3,10 @@ This project is an exclusive collaboration between Kanu Shetkar, Zachary Shaffer
 The purpose of this project is to create a plagarism checker for computer science
 assignments of all multiple file formats.
 
-tyeye
+Elements needed for project
+- PDF Reader extract text
+- process text
+    - tokenize
+- training data
+    - use training dataset
+    - cite sources https://infedu.vu.lt/journal/INFEDU/article/16/info
