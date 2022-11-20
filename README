@@ -23,4 +23,5 @@ Elements needed for project
     - store data to be compared to original class into dataframe
     - tokenize both dataframes by word
     - compare dataframes to extract similarity
-    - 
+    -
+    -boat finally got it working on my computer
