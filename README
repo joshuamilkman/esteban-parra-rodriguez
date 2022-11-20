@@ -11,3 +11,9 @@ Elements needed for project
 - training data
     - use training dataset
     - cite sources https://infedu.vu.lt/journal/INFEDU/article/16/info
+- create labelled dataframe for each case
+    - one column is TFIDF Value
+        - possibly do multiple vectors
+    - other is if plagiarized or not
+    - comparison is made to original source code file(s)
+        - possibly cosine distance from original file vector to
