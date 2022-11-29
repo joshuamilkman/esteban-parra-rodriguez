@@ -21,8 +21,12 @@ Elements needed for project
 
 - create one class for data being evaluated
     - store data to be compared to original class into dataframe
-    - tokenize both dataframes by word
+    - tokenize both dataframes by words
     - compare dataframes to extract similarity
     -
     -boat finally got it working on my computer
         - LETS GOOOOOOOOOOOOOOO
+- 11/29/22
+- need to filter out files from the original folder in our train data and
+get those vectors but we dont want to put in in the training data set
+- put it between original and each row of the cosine distance and measure that
