@@ -1,4 +1,4 @@
-# make DF out of plagarized/nonplagarized files
+# make DF out of plagiarized/non-plagiarized files
 import os
 import pandas as pd
 
@@ -9,11 +9,21 @@ dataframes = []
 
 for folder in subfolders:
     df = pd.DataFrame(columns=["TFIDF", "isPlagiarized"])
+    original = folder + "\\original"
     for (dirpath, dirnames, filenames) in os.walk(folder):
+        dirnames[:] = [d for d in dirnames if d not in original]
         for name in filenames:
             path = os.path.join(dirpath, name)
-            #   if path[44:].__contains__("plagiarized"):
             with open(path) as f:
                 text = f.readlines()
                 df.loc[len(df)] = getData(text, path)
-    print(df)
+    with open(original) as f:
+        text = f.readlines()
+        originalVectors = getData(text, original)
+
+
+
+# filter out files from "original" <3
+# Add one more vector
+# Get those vectors from the file in "original"
+# Compare vectors by cosine distance
