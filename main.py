@@ -23,14 +23,13 @@ for folder in subfolders:
         originalVectors = getData(text, original)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("hello, welcome to the best plagarism checker")
+    #get file name being tested for plagarism
+    file_name = input("please specify the file name you would like to check for plagarism excluding the file extension (ex. txt)")
+    
+    
     
     
 
