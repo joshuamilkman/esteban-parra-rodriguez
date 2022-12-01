@@ -17,11 +17,29 @@ for folder in subfolders:
             with open(path) as f:
                 text = f.readlines()
                 df.loc[len(df)] = getData(text, path)
+                
     with open(original) as f:
         text = f.readlines()
         originalVectors = getData(text, original)
 
-
+def compare_homework(dataframe1, dataframe2): 
+    plagarism_counter
+    count = 0
+    width = len(dataframe1.columns)
+    height = len(dataframe1)
+    total_cells = width * height
+    for (i in len(dataframe1)):
+        for (f in len(dataframe1.columns))
+            for (j in len(dataframe2.columns)
+                if (dataframe1[i,f] == dataframe2[i,j])
+                    count +=
+    if (count > total_cells * 0.7)
+        print("plagarized")
+              
+            
+                
+        
+        
 
 # filter out files from "original" <3
 # Add one more vector
