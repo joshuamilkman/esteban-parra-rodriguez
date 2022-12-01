@@ -29,12 +29,14 @@ def compare_homework(dataframe1, dataframe2):
     height = len(dataframe1)
     total_cells = width * height
     for (i in len(dataframe1)):
-        for (f in len(dataframe1.columns))
-            for (j in len(dataframe2.columns)
-                if (dataframe1[i,f] == dataframe2[i,j])
-                    count +=
-    if (count > total_cells * 0.7)
-        print("plagarized")
+        for (f in len(dataframe1.columns)):
+            for (j in len(dataframe2.columns):
+                if (dataframe1[i,f] == dataframe2[i,j]):
+                    count = count + 1 
+    if (float(count) > float(total_cells * 0.8)):
+        return "plagarized"
+    else:
+        return "clean"
               
             
                 
