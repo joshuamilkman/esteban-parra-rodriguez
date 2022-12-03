@@ -22,6 +22,8 @@ for folder in subfolders:
         text = f.readlines()
         originalVectors = getData(text, original)
 
+        #compares homework for similar tokens in dataframe
+        #jacaard. 
 def compare_homework(dataframe1, dataframe2): 
     plagarism_counter
     count = 0
