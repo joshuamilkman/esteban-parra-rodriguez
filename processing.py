@@ -1,6 +1,15 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
-def getData(text, path):
+
+def getVectors(text, path):
     tfidf = TfidfVectorizer()
-    x = tfidf.fit_transform(text)
-    return [x, int(path[40] == "p")]
+    x_matrix = tfidf.fit_transform(text)
+    y = int(path[40] == "p")
+
+    return getDistance(x_matrix), y  # add new vectors to this array
+
+
+def getDistance(matrix):
+    return cosine_similarity(matrix[1], matrix[0])[0][0]
