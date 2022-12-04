@@ -8,7 +8,8 @@ subfolders = [f.path for f in os.scandir("IR-Plag-Dataset\\IR-Plag-Dataset") if 
 dataframes = []
 
 for folder in subfolders:
-    df = pd.DataFrame(columns=["TFIDF", "isPlagiarized"])
+    #Kanu added here the third one here to the dataframe
+    df = pd.DataFrame(columns=["TFIDF", "isPlagiarized", "countVectorizer"])
     original = folder + "\\original"
     for (dirpath, dirnames, filenames) in os.walk(folder):
         dirnames[:] = [d for d in dirnames if d not in original]
