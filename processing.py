@@ -13,3 +13,6 @@ def getVectors(text, path):
 
 def getDistance(matrix):
     return cosine_similarity(matrix[1], matrix[0])[0][0]
+
+def getJdistance(matrix):
+    return jacaard_score(matrix[1], matrix[0])[0][0]
