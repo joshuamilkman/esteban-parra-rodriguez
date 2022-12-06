@@ -1,18 +1,32 @@
-from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-import numpy as np
+from nltk import word_tokenize
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def getVectors(text, path):
+def getData(text, path, N):
     tfidf = TfidfVectorizer()
-    x_matrix = tfidf.fit_transform(text)
-    y = int(path[40] == "p")
+    T_matrix = tfidf.fit_transform(text) # contains (originalText, text of new file)
+    T = getDistance(T_matrix)
+    J = getJaccard(text)
 
-    return getDistance(x_matrix), y  # add new vectors to this array
+    if int(path[40] == "p"):
+        Z = "plagiarized"
+    else:
+        Z = "clean"
+
+    return N, J, T, Z  # add new vectors to this array
 
 
 def getDistance(matrix):
-    return cosine_similarity(matrix[1], matrix[0])[0][0]
+    return cosine_similarity(matrix[0], matrix[1])[0][0]
 
-def getJdistance(matrix):
-    return jacaard_score(matrix[1], matrix[0])[0][0]
+def jaccard_set(list1, list2):
+    intersection = len(list(set(list1).intersection(list2)))
+    union = (len(list1) + len(list2)) - intersection
+    return float(intersection) / union
+
+
+def getJaccard(group):
+    original = word_tokenize(group[0])
+    comparison = word_tokenize(group[1])
+    return jaccard_set(original, comparison)
